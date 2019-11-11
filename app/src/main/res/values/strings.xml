@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Money\'s</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="labels_array">
+        <item>Makanan &amp; Minuman</item>
+        <item>Transportasi</item>
+        <item>Belanja</item>
+        <item>Kesehatan</item>
+        <item>Pendidikan</item>
+        <item>Bisnis</item>
+        <item>Lainnya</item>
+    </string-array>
+</resources>

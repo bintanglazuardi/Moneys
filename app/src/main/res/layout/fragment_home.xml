@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/top_view"
+        android:background="@color/colorBlue">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nama_top"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:text="Hani Fania"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/saldo_top"
+            android:text="Rp 100.000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:paddingBottom="10dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saldo_awal_akhir"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/top_view">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_saldo_awal"
+            android:text="Saldo Awal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_saldo_sekarang"
+            android:layout_below="@+id/text_saldo_awal"
+            android:text="Saldo Saat Ini"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/jumlah_saldo_awal"
+            android:text="100.000"
+            android:layout_toRightOf="@+id/text_saldo_awal"
+            android:layout_alignParentRight="true"
+            android:layout_toEndOf="@id/jumlah_saldo_awal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/jumlah_saldo_sekarang"
+            android:text="60.000"
+            android:layout_toRightOf="@+id/text_saldo_sekarang"
+            android:layout_alignParentRight="true"
+            android:layout_toEndOf="@id/jumlah_saldo_sekarang"
+            android:layout_below="@id/text_saldo_awal"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/riwayat_txt"
+        android:text="Riwayat Saldo"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:layout_below="@id/saldo_awal_akhir"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/riwayat_saldo"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/edit_text_border"
+        android:layout_below="@+id/riwayat_txt">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/list_transaksi">
+<!--            tools:listitem="@layout/item_transaksi"-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_transaksi"
+
+                android:scrollbars="vertical"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_transaction"
+        android:text="Tambah Transaksi"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/riwayat_saldo" />
+
+
+</RelativeLayout>

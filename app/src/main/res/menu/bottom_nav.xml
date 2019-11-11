@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_action_home"
+        android:id="@+id/home"
+        android:title="Home"/>
+
+    <!--<item
+        android:icon="@drawable/ic_action_scan"
+        android:id="@+id/scan"
+        android:title="Scan"/>-->
+
+    <item
+        android:icon="@drawable/ic_action_setting"
+        android:id="@+id/setting"
+        android:title="Setting"/>
+
+
+
+</menu>
